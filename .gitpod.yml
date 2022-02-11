@@ -18,7 +18,7 @@ tasks:
     command: docker-compose up
 
   - name: Install Hugo dependencies
-    before: sudo apt install hugo
+    before: sudo apt install hugo --y
     init: echo "Your version of Hugo is `hugo version`"
     command: hugo server -D -F --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
