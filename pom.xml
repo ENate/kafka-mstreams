@@ -22,6 +22,7 @@
 	</properties>
 	<modules>
 		<module>authorization-server</module>
+		<module>edge-service</module>
 	</modules>
 
 	<dependencies>

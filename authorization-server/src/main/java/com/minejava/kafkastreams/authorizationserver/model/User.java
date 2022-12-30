@@ -91,7 +91,7 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         // DONE Auto-generated method stub
-        return false;
+        return true;
     }
     
 }
