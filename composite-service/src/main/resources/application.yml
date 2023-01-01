@@ -1,0 +1,57 @@
+server:
+    port: 7000
+    error:
+        include-message: always
+
+app:
+    user-service:
+        host: localhost
+        port: 7001
+spring:
+    application:
+        name: composite-service
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        username: guest
+        password: guest
+    # define producer for stream
+    cloud:
+        stream:
+            producer:
+                produce: false
+            default-binder: rabbit
+                # binder: rabbit
+                # contentType: application/json
+            bindings:
+                userProducer-out-0:
+                    destination: users
+                    producer:
+                        requiredGroups: usersGroup
+            kafka:
+                binder:
+                    brokers: 127.0.0.1
+                    defaultBrokerPort: 9002
+# Logging settings
+logging:
+    level:
+        root: INFO
+        com:
+            minejava: DEBUG
+        org:
+            springframework:
+                amqp: DEBUG
+                data:
+                    mongodb:
+                        core:
+                            MongoTemplate: DEBUG
+
+# Actuator endpoints
+management:
+    endpoint:
+        health:
+            show-details: "ALWAYS"
+    endpoints:
+        web:
+            exposure:
+                include: "*"   # Lock this up in production

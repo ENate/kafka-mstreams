@@ -17,6 +17,7 @@ import com.minejava.kafkastreams.utilservice.payload.UserPayload;
 import reactor.core.publisher.Mono;
 
 
+@Component
 public class MessageConsumer {
     private final Logger LOG = LoggerFactory.getLogger(MessageConsumer.class);
 
