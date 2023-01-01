@@ -16,4 +16,59 @@
     <name>composite-service</name>
     <!-- FIXED change it to the project's website -->
     <url>https://www.composite-service.com</url>
+    <properties>
+        <util-service.version>0.0.1-SNAPSHOT</util-service.version>
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
+    </properties>
+    <dependencies>
+        <!-- Start spring cloud dependencies -->
+        <!-- Start spring cloud stream dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream</artifactId>
+        </dependency>
+        <!-- End spring cloud stream dependency -->
+        <!-- Start spring cloud stream rabbit binder dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+        </dependency>
+        <!-- End spring cloud stream rabbit binder dependency -->
+        <!-- Spring cloud binder kafka dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-kafka</artifactId>
+        </dependency>
+        <!-- End spring cloud stream binder kafka dependency -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-test-binder</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- End spring cloud dependencies -->
+        <!-- Start third party dependencies -->
+        <!-- Start util-service common API dependency -->
+        <dependency>
+            <groupId>com.minejava.kafkastreams</groupId>
+            <artifactId>util-service</artifactId>
+            <version>${util-service.version}</version>
+        </dependency>
+        <!-- End util-service common API dependency -->
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
