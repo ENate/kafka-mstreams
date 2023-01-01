@@ -6,13 +6,12 @@
 		<groupId>com.minejava.kafkastreams</groupId>
 		<artifactId>kafka-streamx</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.minejava.kafkastreams</groupId>
 	<artifactId>edge-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>edge-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>An API gateway for the distributed service</description>
 	<properties>
 		<spring-cloud.version>2022.0.0</spring-cloud.version>
 	</properties>
