@@ -1,0 +1,13 @@
+server:
+    port: 7000
+    error:
+        include-message: always
+spring:
+    application:
+        name: user-service
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: user-db
+            authentication-database: testdb

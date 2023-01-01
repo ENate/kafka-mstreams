@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AuthorizationServerApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.authorizationserver.AuthorizationServerApplication",
+            "projectName": "authorization-server"
+        },
+        {
+            "type": "java",
+            "name": "Launch CompositeServiceApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.compositeservice.CompositeServiceApplication",
+            "projectName": "composite-service"
+        },
+        {
+            "type": "java",
+            "name": "Launch EdgeServiceApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.edgeservice.EdgeServiceApplication",
+            "projectName": "edge-service"
+        },
+        {
+            "type": "java",
+            "name": "Launch UserServiceApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.userservice.UserServiceApplication",
+            "projectName": "user-service"
+        },
+        {
+            "type": "java",
+            "name": "Launch UtilServiceApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.utilservice.UtilServiceApplication",
+            "projectName": "util-service"
+        }
+    ]
+}

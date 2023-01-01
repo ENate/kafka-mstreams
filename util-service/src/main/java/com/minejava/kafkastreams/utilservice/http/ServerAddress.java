@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ServiceAddress {
+public class ServerAddress {
     private final String port;
     private String hostAddress = null;
 
-    public ServiceAddress(@Value("${server.port}") String port) {
+    public ServerAddress(@Value("${server.port}") String port) {
         this.port = port;
     }
 

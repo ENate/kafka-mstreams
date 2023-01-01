@@ -19,11 +19,17 @@
 
 	<properties>
 		<java.version>17</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
+
 	<modules>
 		<module>util-service</module>
 		<module>authorization-server</module>
 		<module>edge-service</module>
+		<module>composite-service</module>
+		<module>user-service</module>
 	</modules>
 
 	<dependencyManagement>
