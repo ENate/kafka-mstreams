@@ -28,7 +28,7 @@ public class CompositeController {
         return compositeService.createUser(user);
     }
 
-    @GetMapping("/user")
+    @GetMapping("/user/users")
     public Flux<UserPayload> getAllUsers() {
         return compositeService.getAllUsers();
     }

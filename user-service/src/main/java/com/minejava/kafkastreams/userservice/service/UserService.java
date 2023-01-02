@@ -12,7 +12,7 @@ import com.minejava.kafkastreams.utilservice.payload.UserPayload;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
+@Service("UserService")
 public class UserService {
 
     // Define fields

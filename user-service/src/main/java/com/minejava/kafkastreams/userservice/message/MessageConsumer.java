@@ -49,7 +49,7 @@ public class MessageConsumer {
                                     ex -> new BadRequestException("Duplicate key, username " + user.getUsername() +
                                     " or email address " + user.getEmail() +" had already been used ")
                                 )
-                                .subscribe(u -> LOG.info("User Created at", u));
+                                .subscribe(u -> LOG.info("User Created for {}", u));
                     break;            
                 //
                 case READ:

@@ -204,5 +204,25 @@ services:
       KAFKA_REST_BOOTSTRAP_SERVERS: 'broker:29092'
       KAFKA_REST_LISTENERS: "http://0.0.0.0:8082"
       KAFKA_REST_SCHEMA_REGISTRY_URL: 'http://schema-registry:8081'
-  
-  
+  mongodb:
+        image: mongo:latest
+        container_name: mongodb
+        ports:
+            - 27017:27017
+        volumes:
+            - ~/apps/mongo:/data/db
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME:root
+            - MONGO_INITDB_ROOT_PASSWORD:example
+            - MONGO_INITDB_DATABASE:testdb
+  rabbitmq:
+    image: library/rabbitmq:3.8.9-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    container_name: rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 10

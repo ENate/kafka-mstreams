@@ -22,7 +22,7 @@ import com.minejava.kafkastreams.utilservice.payload.UserPayload;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
+@Service("CompositeService")
 public class CompositeService {
     private static final Logger LOG = LoggerFactory.getLogger(CompositeService.class);
     private static final String USER_REQ_MAP = "/user";

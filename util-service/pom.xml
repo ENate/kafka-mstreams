@@ -10,6 +10,7 @@
 	<groupId>com.minejava.kafkastreams</groupId>
 	<artifactId>util-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>util-service</name>
 	<description>A util service for entire application</description>
 	
@@ -35,6 +36,12 @@
             <version>${mapstruct.version}</version>
             <scope>compile</scope>
         </dependency>
+		<!-- Adding reactor tests -->
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
+		</dependency>
     </dependencies>
 
 </project>
