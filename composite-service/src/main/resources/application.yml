@@ -19,15 +19,18 @@ spring:
     cloud:
         stream:
             producer:
-                produce: true
+                produce: false
             default-binder: rabbit
                 # binder: rabbit
                 # contentType: application/json
             bindings:
+                output:
+                    contentType: applicaion/json
                 userProducer-out-0:
                     destination: users
                     producer:
                         requiredGroups: usersGroup
+
             kafka:
                 binder:
                     brokers: 127.0.0.1

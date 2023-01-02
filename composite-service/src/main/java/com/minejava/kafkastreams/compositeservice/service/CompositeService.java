@@ -34,7 +34,7 @@ public class CompositeService {
 
     private final StreamBridge streamBridge;
 
-    public CompositeService(@Value("${app.user-service.port}")String userServiceHost,
+    public CompositeService(@Value("${app.user-service.host}")String userServiceHost,
                             @Value("${app.user-service.port}")String userServicePort,
                             WebClient.Builder webClient, ObjectMapper objectMapper,
                             StreamBridge streamBridge) {
