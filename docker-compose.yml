@@ -212,9 +212,9 @@ services:
         volumes:
             - ~/apps/mongo:/data/db
         environment:
-            - MONGO_INITDB_ROOT_USERNAME:root
-            - MONGO_INITDB_ROOT_PASSWORD:example
-            - MONGO_INITDB_DATABASE:testdb
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: example
+            MONGO_INITDB_DATABASE: testdb
   rabbitmq:
     image: library/rabbitmq:3.8.9-management-alpine
     ports:
