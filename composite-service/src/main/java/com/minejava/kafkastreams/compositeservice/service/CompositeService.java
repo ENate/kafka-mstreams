@@ -34,8 +34,8 @@ public class CompositeService {
 
     private final StreamBridge streamBridge;
 
-    public CompositeService(@Value("${app.user-service.host}")String userServiceHost,
-                            @Value("${app.user-service.host}")String userServicePort,
+    public CompositeService(@Value("${app.user-service.port}")String userServiceHost,
+                            @Value("${app.user-service.port}")String userServicePort,
                             WebClient.Builder webClient, ObjectMapper objectMapper,
                             StreamBridge streamBridge) {
         this.userServiceUrl = "http://" + userServiceHost + ":" + userServicePort + USER_REQ_MAP;

@@ -29,8 +29,8 @@
 		<module>util-service</module>
 		<module>authorization-server</module>
 		<module>edge-service</module>
-		<module>composite-service</module>
 		<module>user-service</module>
+		<module>composite-service</module>
 	</modules>
 
 	<dependencyManagement>
@@ -51,11 +51,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency> -->
+		<!--  -->
 		<!-- End spring config processor dependency -->
 		<!-- End spring framework dependencies -->
 		<dependency>
@@ -74,7 +75,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-			<scope>annotationProcessor</scope>
+			<!-- <scope>annotationProcessor</scope> -->
 		</dependency>
 		<!-- Start testing dependencies -->
 		<!-- Start spring starter test dependency -->
@@ -93,20 +94,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.compiler.plugin.version}</version>
+				<!--<version>${maven.compiler.plugin.version}</version>-->
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
-					<!-- <excludes>
+					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
-					</excludes> -->
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>

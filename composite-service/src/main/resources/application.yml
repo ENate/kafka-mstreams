@@ -5,7 +5,7 @@ server:
 
 app:
     user-service:
-        host: localhost
+        host: 127.0.0.1
         port: 7001
 spring:
     application:
@@ -19,7 +19,7 @@ spring:
     cloud:
         stream:
             producer:
-                produce: false
+                produce: true
             default-binder: rabbit
                 # binder: rabbit
                 # contentType: application/json
