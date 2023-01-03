@@ -11,7 +11,7 @@ spring:
     application:
         name: composite-service
     rabbitmq:
-        host: 127.0.0.1
+        host: localhost
         port: 5672
         username: guest
         password: guest
@@ -25,16 +25,16 @@ spring:
                 # contentType: application/json
             bindings:
                 output:
-                    contentType: applicaion/json
+                    contentType: application/json
                 userProducer-out-0:
                     destination: users
                     producer:
-                        requiredGroups: usersGroup
+                        required-groups: usersGroup
 
             kafka:
-                binder:
+                bindings:
                     brokers: 127.0.0.1
-                    defaultBrokerPort: 9002
+                    defaultBrokerPort: 9092
 # Logging settings
 logging:
     level:

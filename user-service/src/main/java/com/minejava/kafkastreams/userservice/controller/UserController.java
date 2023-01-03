@@ -20,7 +20,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    // endpoint to retrive all users
+    // endpoint to return all users
     @GetMapping("/users")
     public Flux<UserPayload> getAllUsers() {
         return userService.getAllUsers();

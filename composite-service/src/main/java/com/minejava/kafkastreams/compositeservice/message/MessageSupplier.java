@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class MessageSupplier {
     private final Logger LOG = LoggerFactory.getLogger(MessageSupplier.class);
 
-    private Boolean produce;
+    private final Boolean produce;
     public MessageSupplier(@Value("${spring.cloud.stream.producer.produce}") Boolean produce) {
         this.produce = produce;
     }
