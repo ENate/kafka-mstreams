@@ -25,10 +25,12 @@ import reactor.core.publisher.Mono;
 @Service("CompositeService")
 public class CompositeService {
     private static final Logger LOG = LoggerFactory.getLogger(CompositeService.class);
-    private static final String USER_REQ_MAP = "/user";
+    private static final String USER_REQ_MAP = "/user/users";
+        private static final String USER_ID_MAP = "/user/";
     private static final String PRODUCER_BINDING_NAME = "userProducer-out-0";
 
     private final String userServiceUrl;
+       private final String userIdString;
     private final WebClient webClient;
     private final ObjectMapper mapper;
 
@@ -39,6 +41,7 @@ public class CompositeService {
                             WebClient.Builder webClient, ObjectMapper objectMapper,
                             StreamBridge streamBridge) {
         this.userServiceUrl = "http://" + userServiceHost + ":" + userServicePort + USER_REQ_MAP;
+        this.userIdString = "http://" + userServiceHost + ":" + userServicePort + USER_ID_MAP;
         this.webClient = webClient.build();
         this.mapper = objectMapper;
         this.streamBridge = streamBridge;
@@ -61,7 +64,7 @@ public class CompositeService {
         LOG.info("Getting desired used using the Id: {}", userId);
         return webClient
                 .get()
-                .uri(userServiceUrl)
+                .uri(userIdString+userId)
                 .retrieve()
                 .bodyToMono(UserPayload.class)
                 .onErrorMap(WebClientResponseException.class, this::handleException);
