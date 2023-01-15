@@ -64,6 +64,8 @@ public class AuthorizationServerConfig {
         return http.build();
     }
 
+        @Bean
+        @Order(Ordered.HIGHEST_PRECEDENCE + 1)
     public SecurityFilterChain oauth2SecurityFilterChain(HttpSecurity http) throws Exception {
         OAuth2AuthorizationServerConfigurer authorizationServerConfigurer =
         new OAuth2AuthorizationServerConfigurer();

@@ -10,6 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -18,6 +19,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@JsonAutoDetect
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements UserDetails {
