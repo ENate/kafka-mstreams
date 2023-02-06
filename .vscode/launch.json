@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EurekaServiceApplication",
+            "request": "launch",
+            "mainClass": "com.minejava.kafkastreams.eurekaservice.EurekaServiceApplication",
+            "projectName": "eureka-server"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
