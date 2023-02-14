@@ -22,6 +22,11 @@
     </properties>
     <dependencies>
         <!-- Start spring cloud dependencies -->
+        <!-- Start spring boot security -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
         <!-- Start spring cloud stream dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
