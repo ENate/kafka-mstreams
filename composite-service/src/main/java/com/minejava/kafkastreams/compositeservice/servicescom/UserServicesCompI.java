@@ -25,7 +25,7 @@ public class UserServicesCompI {
 	}
 
 
-	public Mono<UserserviceAg> getDoctor(String userId) {
+	public Mono<UserserviceAg> getUserById(String userId) {
 		return Mono.zip(
 			  values -> createUserAg(
 				 (UserPayload) values[0],
