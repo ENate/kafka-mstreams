@@ -9,7 +9,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.minejava.kafkastreams</groupId>
     <artifactId>composite-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -18,7 +17,7 @@
     <url>https://www.composite-service.com</url>
     <properties>
         <util-service.version>0.0.1-SNAPSHOT</util-service.version>
-        <spring-cloud.version>2022.0.1</spring-cloud.version>
+        <common-services.version>0.0.1-SNAPSHOT</common-services.version>
     </properties>
     <dependencies>
         <!-- Start spring cloud dependencies -->
@@ -33,6 +32,11 @@
             <artifactId>spring-cloud-stream</artifactId>
         </dependency>
         <!-- End spring cloud stream dependency -->
+        <!-- Start spring cloud starter resilience4j dependency -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
         <!-- Start spring cloud stream rabbit binder dependency -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -45,11 +49,6 @@
             <artifactId>spring-cloud-stream-binder-kafka</artifactId>
         </dependency>
         <!-- End spring cloud stream binder kafka dependency -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-test-binder</artifactId>
@@ -65,16 +64,13 @@
             <scope>compile</scope>
         </dependency>
         <!-- End util-service common API dependency -->
+        <!-- Start util-service common API dependency -->
+        <dependency>
+            <groupId>com.minejava.kafkastreams</groupId>
+            <artifactId>common-services</artifactId>
+            <version>${common-services.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- End util-service common API dependency -->
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

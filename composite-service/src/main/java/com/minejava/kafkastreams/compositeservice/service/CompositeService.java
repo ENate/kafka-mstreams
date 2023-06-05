@@ -2,6 +2,9 @@ package com.minejava.kafkastreams.compositeservice.service;
 
 import java.io.IOException;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -60,6 +63,9 @@ public class CompositeService {
     }
 
     // Get user with given userId
+    @CircuitBreaker(name = "users")
+    @TimeLimiter(name = "users")
+    @Retry(name = "users")
     public Mono<UserPayload> getUserById(String userId) {
         LOG.info("Getting desired used using the Id: {}", userId);
         return webClient

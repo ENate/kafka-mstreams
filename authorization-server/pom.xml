@@ -7,7 +7,7 @@
 		<artifactId>kafka-streamx</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.minejava.kafkastreams</groupId>
+
 	<artifactId>authorization-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>authorization-server</name>
@@ -15,17 +15,10 @@
 	
 	<dependencies>
 		<!-- Start spring boot dependencies  -->
-		<!-- Start spring actuator dependency -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<!-- End spring actuator dependency -->
 		<!-- Start spring authorization server -->
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-oauth2-authorization-server</artifactId>
-			<version>1.0.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
 		</dependency>
 		<!-- Start spring framework boot security -->
 		<dependency>
@@ -48,13 +41,6 @@
 		</dependency>
 		<!-- End spring devtools dependency -->
 		<!-- Start testing dependencies -->
-		<!-- Start spring boot starter test -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- End spring boot starter test dependency -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>

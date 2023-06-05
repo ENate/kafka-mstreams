@@ -9,15 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.minejava.kafkastreams</groupId>
-    <artifactId>user-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <artifactId>user-service</artifactId>
     <name>user-service</name>
     <!-- FIXED change it to the project's website -->
     <url>https://www.user-service.com</url>
     <properties>
-        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <spring-cloud.version>2022.0.3</spring-cloud.version>
         <util-service.version>0.0.1-SNAPSHOT</util-service.version>
     </properties>
 
@@ -59,7 +57,7 @@
             <artifactId>spring-cloud-stream-test-binder</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Third pary dependencies -->
+        <!-- Third party dependencies -->
         <dependency>
             <groupId>com.minejava.kafkastreams</groupId>
             <artifactId>util-service</artifactId>

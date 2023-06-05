@@ -7,14 +7,12 @@
 		<artifactId>kafka-streamx</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.minejava.kafkastreams</groupId>
+
 	<artifactId>edge-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>edge-service</name>
 	<description>An API gateway for the distributed service</description>
-	<properties>
-		<spring-cloud.version>2022.0.1</spring-cloud.version>
-	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -29,11 +27,6 @@
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-test</artifactId>
@@ -50,16 +43,5 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			
-		</dependencies>
-	</dependencyManagement>
+
 </project>
